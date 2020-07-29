@@ -13,6 +13,9 @@
 		C536680024D00DAA009B8F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53667FE24D00DAA009B8F73 /* Main.storyboard */; };
 		C536680224D00DAD009B8F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C536680124D00DAD009B8F73 /* Assets.xcassets */; };
 		C536680524D00DAE009B8F73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C536680324D00DAE009B8F73 /* LaunchScreen.storyboard */; };
+		C536680F24D0484E009B8F73 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536680E24D0484E009B8F73 /* Constants.swift */; };
+		C536681124D051E8009B8F73 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536681024D051E8009B8F73 /* Video.swift */; };
+		C536681324D05236009B8F73 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536681224D05236009B8F73 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		C536680124D00DAD009B8F73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C536680424D00DAE009B8F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C536680624D00DAE009B8F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C536680E24D0484E009B8F73 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C536681024D051E8009B8F73 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		C536681224D05236009B8F73 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +64,13 @@
 			children = (
 				C53667F824D00DAA009B8F73 /* AppDelegate.swift */,
 				C53667FA24D00DAA009B8F73 /* SceneDelegate.swift */,
+				C536681224D05236009B8F73 /* Model.swift */,
 				C53667FC24D00DAA009B8F73 /* ViewController.swift */,
 				C53667FE24D00DAA009B8F73 /* Main.storyboard */,
 				C536680124D00DAD009B8F73 /* Assets.xcassets */,
 				C536680324D00DAE009B8F73 /* LaunchScreen.storyboard */,
+				C536681024D051E8009B8F73 /* Video.swift */,
+				C536680E24D0484E009B8F73 /* Constants.swift */,
 				C536680624D00DAE009B8F73 /* Info.plist */,
 			);
 			path = "youtube-onedaybuild";
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C536680F24D0484E009B8F73 /* Constants.swift in Sources */,
 				C53667FD24D00DAA009B8F73 /* ViewController.swift in Sources */,
 				C53667F924D00DAA009B8F73 /* AppDelegate.swift in Sources */,
+				C536681324D05236009B8F73 /* Model.swift in Sources */,
 				C53667FB24D00DAA009B8F73 /* SceneDelegate.swift in Sources */,
+				C536681124D051E8009B8F73 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
