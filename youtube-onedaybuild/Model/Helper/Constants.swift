@@ -11,9 +11,9 @@ import Foundation
 struct Constants {
     
     static var API_KEY = "AIzaSyCCpITqhGyoZTXTJ_gwkDmL5KRaNd3m7uo"
-    static var PLAYLIST_ID = "UU2D6eRvCeMtcF5OGHf1-trw"
+    static var PLAYLIST_ID = "PLMRqhzcHGw1ZkH8RuznGMS0NZs0jWQQ5a"
     static var API_URL = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=\(Constants.PLAYLIST_ID)&key=\(Constants.API_KEY)"
-   // static var DATE_FORMAT = "EEEE, MMM d, yyyy"
+    
     static var YOUTUBE_EMBEDED_URL = "https://www.youtube.com/embed/"
     
     static func setDate(_ date:Date) -> String{
