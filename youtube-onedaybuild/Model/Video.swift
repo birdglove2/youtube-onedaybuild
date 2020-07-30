@@ -10,7 +10,6 @@ import Foundation
 
 struct Video : Decodable  {
     
-   // var items:[Video]?
     var videoId = ""
     var title = ""
     var description = ""

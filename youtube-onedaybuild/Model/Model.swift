@@ -49,7 +49,7 @@ class Model {
                 self.modelDelagate?.videosFetched(response.items!)
                 
                 // print response at console
-                dump(response)
+             //   dump(response)
                 
             } catch {
                 print("Error decoding JSON")
