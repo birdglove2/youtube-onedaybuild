@@ -16,32 +16,39 @@ class Model {
     
     func getVideos() {
         
-        print("KKKKKKKKKKKKKKKKKKKKKKKKKK")
         // Create a URL object
         let url = URL(string: Constants.API_URL) ?? nil
         
         guard url != nil else {
             return
         }
-        
-        
+    
         // Get a URLSession object
         let session = URLSession.shared
         
         // Get a data task from a URLSession
-        let dataTask = session.dataTask(with: url!) { (data, response, error) in
+        let dataTask = session.dataTask(with: url!) { (data, response, err) in
             
             // Check if there were any error
-            if error != nil || data == nil {
+            if err != nil || data == nil {
                 return
             }
             
             // Parsing the data into video objects
+            do {
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                
+                let response = try decoder.decode(Response.self, from: data!)
+                
+                dump(response)
+                
+            } catch {
+                print("Error decoding JSON")
+            }
         }
         
         // Kick off the task
-        dataTask.resume()
-        print("xxxxxxxxxxx")
-        
+        dataTask.resume()        
     }
 }
