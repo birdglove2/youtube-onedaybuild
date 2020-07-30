@@ -8,11 +8,15 @@
 
 import Foundation
 
+protocol ModelProtocol {
+    
+    func videosFetched(_ videos:[Video])
+    
+}
+
 class Model {
     
-    init(){
-        
-    }
+    var modelDelagate:ModelProtocol?
     
     func getVideos() {
         
@@ -34,13 +38,17 @@ class Model {
                 return
             }
             
-            // Parsing the data into video objects
             do {
+                 // Parsing the data into video objects
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
                 
                 let response = try decoder.decode(Response.self, from: data!)
                 
+                // Call the "videosFetched" method of the delegate
+                self.modelDelagate?.videosFetched(response.items!)
+                
+                // print response at console
                 dump(response)
                 
             } catch {
