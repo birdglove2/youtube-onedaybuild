@@ -25,6 +25,21 @@ class ViewController: UIViewController {
         
         model.getVideos()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Check if a video actually was selected
+        guard tableView.indexPathForSelectedRow != nil else {
+            return
+        }
+        
+        // Get a reference from video that was tapped on
+        let selectedVideo = videos[tableView.indexPathForSelectedRow!.row]
+        
+        // Parse the video reference to DetailViewController
+        let detailVC:DetailViewController = segue.destination as! DetailViewController
+        detailVC.video = selectedVideo
+        
+    }
 
 }
 

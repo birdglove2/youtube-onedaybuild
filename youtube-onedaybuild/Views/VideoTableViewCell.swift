@@ -67,9 +67,7 @@ class VideoTableViewCell: UITableViewCell {
         
         // set the title and date label
         self.titleLabel.text = video.title
-        
-        let df = DateFormatter()
-        df.dateFormat = "EEEE, MMM d, yyyy"
-        self.dateLabel.text = df.string(from: video.published)
+    
+        self.dateLabel.text = Constants.setDate(video.published)
     }
 }
